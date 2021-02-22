@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             WifiManager manager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
             String ip = Formatter.formatIpAddress(manager.getConnectionInfo().getIpAddress());
             binding.tvIp.setText(ip);
-            Log.e("---IP Address---", "ll_Country IP: " + ip);
+            Log.e("---IP Address---", "Mobile IP: " + ip);
         });
 
     }
