@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyMob_Horoscope</string>
+    <string name="mmh_ip_add">IP ADDRESS :</string>
+</resources>
