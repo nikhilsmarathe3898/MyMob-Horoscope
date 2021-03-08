@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MyMob_Horoscope</string>
     <string name="mmh_ip_add">IP ADDRESS :</string>
+    <string name="mmh_time">System Time :</string>
+    <string name="mmh_blutooth_status">Blutooth Status :</string>
+    <string name="mmh_device_name">Device Name :</string>
+    <string name="mmh_device_version">Device Version :</string>
+    <string name="mmh_mobile_imei">Mobile IMEI :</string>
 </resources>
