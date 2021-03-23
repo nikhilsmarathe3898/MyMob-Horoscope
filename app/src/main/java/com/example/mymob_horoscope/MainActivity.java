@@ -164,9 +164,9 @@ public class MainActivity extends AppCompatActivity {
             binding.tvBlutooth.setText("Blutooth Not Supported!");
         else {
             if (bluetoothAdapter.isEnabled())
-                binding.tvBlutooth.setText("Blutooth ON!");
+                binding.tvBlutooth.setText("Blutooth ON");
             else if (!bluetoothAdapter.isEnabled())
-                binding.tvBlutooth.setText("Blutooth OFF!");
+                binding.tvBlutooth.setText("Blutooth OFF");
         }
     }
 
