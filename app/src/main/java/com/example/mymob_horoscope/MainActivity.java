@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             deviceName();
             deviceSDKVERSION();
             deviceIMEI();
-
         });
 
         binding.btnFile.setOnClickListener(new View.OnClickListener() {
@@ -64,10 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 checkPermission();
             }
-
         });
-
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -79,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Permission Denied!", Toast.LENGTH_SHORT).show();
         } else {
 
-
-            String deviceName = binding.tvDeviceName.getText().toString();
             ArrayList<String> list = new ArrayList<>();
             list.add("!! MyMob_Hororscope !!");
             list.add("Device: " + binding.tvDeviceName.getText().toString());
@@ -91,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
             Log.e("List", "onClick: " + list);
 
             createwPDF(list);
-
         }
     }
 
@@ -100,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         // For PDF File Generation.
         PdfDocument pdfDocument = new PdfDocument();
         PdfDocument.PageInfo pageInfo = new PdfDocument.
-                PageInfo.Builder(300, 600, 1).create(); // creating pageno.
+                PageInfo.Builder(300, 600, 1).create(); // creating page no.
 
 
         PdfDocument.Page page = pdfDocument.startPage(pageInfo);
@@ -108,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         Paint paint = new Paint();
         paint.setColor(Color.BLACK);
         for (int i = 0; i < list.size(); i++) {
-            canvas.drawText(list.get(0),80,45,paint);
+            canvas.drawText(list.get(0), 80, 45, paint); // Write text into PDF
             canvas.drawLine(40, 70, 250, 70, paint); // for drawing a line.
             canvas.drawText(list.get(1), 50, 85, paint);
             canvas.drawLine(40, 90, 250, 90, paint);
@@ -121,14 +114,13 @@ public class MainActivity extends AppCompatActivity {
             canvas.drawText(list.get(5), 50, 165, paint);
             canvas.drawLine(40, 170, 250, 170, paint);
         }
-
         pdfDocument.finishPage(page);
+
         File file = new File(directoryPath);
 
         if (!file.exists()) {
             file.mkdirs();
         }
-
         String targetPDF = directoryPath + "mymob.pdf";
         File filePath = new File(targetPDF);
 
@@ -140,9 +132,10 @@ public class MainActivity extends AppCompatActivity {
             pdfDocument.writeTo(new FileOutputStream(filePath));
             Toast.makeText(this, "PDF Created!", Toast.LENGTH_SHORT).show();
             Log.e("---File PAth---", "createwPDF: Path:" + filePath);
+
         } catch (IOException e) {
             Log.e("---PDF---", "error: " + e.toString());
-            Toast.makeText(this, "SOmething went wrong for PDF creation!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Something went wrong for PDF creation!", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
         pdfDocument.close();
