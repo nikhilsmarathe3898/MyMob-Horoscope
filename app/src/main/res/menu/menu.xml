@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/mn_group1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/mn_setting"
+            android:title="Setting" />
+
+        <item
+            android:id="@+id/mn_darkmode"
+            android:title="Dark Mode" />
+
+        <item
+            android:id="@+id/mn_about"
+            android:title="About" />
+
+        <item
+            android:id="@+id/mn_exit"
+            android:title="Exit" />
+    </group>
+</menu>

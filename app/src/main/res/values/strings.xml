@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">MyMob_Horoscope</string>
     <string name="mmh_ip_add">IP ADDRESS :</string>
+    <string name="mmh_resolution">Resolution :</string>
+    <string name="mmh_ram">Ram :</string>
     <string name="mmh_time">System Time :</string>
     <string name="mmh_blutooth_status">Blutooth Status :</string>
     <string name="mmh_device_name">Device Name :</string>
     <string name="mmh_device_version">Device Version :</string>
     <string name="mmh_mobile_imei">Mobile IMEI :</string>
+    <string name="mmh_magnetometer">Magnetometer :</string>
+    <string name="mmh_mobile_plateform">Plateform :</string>
+    <string name="mmh_kernel">Kernel :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <string name="net_wifi_name">IP Address :</string>
+    <string name="net_wifi_state">WIFI Status :</string>
 </resources>
